@@ -74,10 +74,10 @@ ctx.lists["user.code_keyword"] = {
 @ctx.action_class("user")
 class UserActions:
     def code_insert_is_not_null():
-        actions.auto_insert(" !== null")
+        actions.auto_insert(" != null")
 
     def code_insert_is_null():
-        actions.auto_insert(" === null")
+        actions.auto_insert(" == null")
 
     def code_type_dictionary():
         actions.user.insert_between("{", "}")
